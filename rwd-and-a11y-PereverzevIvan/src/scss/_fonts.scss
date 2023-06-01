@@ -1,0 +1,14 @@
+@mixin font-face($family, $weight, $style, $path1, $path2) {
+    @font-face {
+        font-family: $family;
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+        src: url($path1) format('woff2'), url($path2) format('woff');
+    }
+}
+
+@include font-face('FuturePT', 300, normal, '../fonts/FuturaPT-Light.woff2', '../fonts/FuturaPT-Light.woff');
+@include font-face('FuturePT', 400, normal, '../fonts/FuturaPT-Regular.woff2', '../fonts/FuturaPT-Regular.woff');
+@include font-face('FuturePT', 500, normal, '../fonts/FuturaPT-Medium.woff2', '../fonts/FuturaPT-Medium.woff');
+@include font-face('FuturePT', 700, normal, '../fonts/FuturaPT-Bold.woff2', '../fonts/FuturaPT-Bold.woff');

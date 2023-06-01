@@ -1,0 +1,363 @@
+:root {
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.header {
+    background-color: black;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__link {
+    max-width: max-content;
+    max-height: max-content;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.2s; 
+}
+
+.header__link:not(:has(img)):hover {
+    transform: scale(1.07);
+    color: yellow;
+}
+
+.header__logotype {
+    width: 50%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.window {
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px gray;
+    margin: 0 auto 0 auto;
+    transition: transform 0.2s;
+}
+
+.window--hover:hover {
+    transform: scale(1.01);
+}
+
+.picture {
+    margin-top: 20px;
+    max-width: 25em;
+    min-height: 25em;
+    grid-template-columns: 0fr 1.5fr 1.5fr repeat(4, 1fr) 0.9fr;
+    grid-template-rows: repeat(5, 1fr) 0.5fr;
+    grid-template-areas: 
+    "r1 r1 r1 w1 w1 w2 w2 w3"
+    "s2 w4 w4 w5 w5 w5 w5 w6"
+    "s2 w7 w7 b1 b1 b1 b1 w6"
+    "s2 s1 s1 b1 b1 b1 b1 y1"
+    "s2 y2 w8 w9 w9 w9 w9 y1"
+    "s2 y2 w8 w9 w9 w9 w9 w10";
+    gap: 10px;
+    background-color: black;
+}
+
+.picture__block--color_red {
+    background-color: red;
+}
+
+.picture__block--color_white {
+    background-color: white;
+}
+
+.picture__block--color_blue {
+    background-color: blue;
+}
+
+.picture__block--color_yellow {
+    background-color: yellow;
+}
+
+.picture__block--color_black {
+    background-color: black;
+}
+
+.book-cover {
+    margin-top: 20px;
+    padding: 10px 5px 0 0;
+    max-width: max-content;
+    max-height: max-content;
+    grid-template-columns: 10px [column1] min-content [column2] max-content;
+    grid-template-rows: [row1] 1fr [row2] 0.5fr [space_1] 3fr [row3] max-content [row4] 1fr [space_2] 3fr;
+}
+
+.book-cover__text1 {
+    font-size: 45px;
+    font-weight: 900;
+    grid-column: column1;
+    line-height: 90%;
+}
+
+.book-cover__text2 {
+    font-size: 130px;
+    font-weight: 900;
+    color: red;
+    grid-column: column2;
+    grid-row: row3;
+    line-height: 95%;
+    justify-self: center;
+    align-self: start;
+}
+
+.book-cover__text3 {
+    font-size: 34px;
+    font-weight: 900;
+    color: red;
+    grid-column: column2;
+    grid-row: row4;
+    line-height: 0%;
+    justify-self: center;
+    align-self: start;
+}
+
+.book-cover__block {
+    background-color: black;
+    grid-column: 1/column2;
+    grid-row: row3/-1;
+    max-width: 70px;
+}
+
+.book-cover__table {
+    grid-column: column1;
+}
+
+.book-cover__table-text {
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20%;
+}
+
+.dashboard {
+    background-color: lightgray;
+    margin-top: 20px;
+    max-width: 60em;
+    max-height: 20em;
+    grid-template-columns: [sidebar] 1.5fr [column1] 2.5fr [column2] 1.5fr [column3] 2fr 10px;
+    grid-template-rows: 10px  [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr [row6] 1fr 10px;
+    gap: 10px;
+}
+
+.dashboard__sidebar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    grid-column: sidebar;
+    grid-row: 1/-1;
+}
+
+.dashboard__link {
+    font-size: 20px;
+    color:black;
+    transition: transform 0.2s;
+}
+
+.dashboard__link:hover {
+    transform: scale(1.05);
+    color: blue;
+}
+
+.dashboard__card {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#main-chart {
+    grid-column: column1;
+    grid-row: row1/-2;
+}
+
+
+#chart1 {
+    grid-column: column2;
+    grid-row: row1/row3;
+}
+
+#chart2 {
+    grid-column: column2;
+    grid-row: row3/row5;
+}
+
+#chart3 {
+    grid-column: column2;
+    grid-row: row5/-2;
+}
+
+#chart4 {
+    grid-column: column3;
+    grid-row: row1/row4;
+}
+
+#chart5 {
+    grid-column: column3;
+    grid-row: row4/-2;
+}
+
+.gallery {
+    margin-top: 20px;
+    max-width: 70em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px 10px 15px 10px;
+}
+
+.gallery__image {
+    grid: 1fr 1fr;
+    transition: transform 0.2s;
+}
+
+.gallery__image>img {
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.gallery__image:hover {
+    transform: scale(1.02);
+}
+
+.btn {
+    padding: 5px 15px;
+    grid-row: 1;
+    grid-column: 1;
+    color: black;
+    justify-self: center;
+    align-self: center;
+    border: none;
+    border-radius: 5px;
+    background-color: aquamarine;
+    cursor: pointer;
+    transition: all 0.05s;
+}
+
+.btn:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px black;
+}
+
+.gallery__image>.btn {
+    visibility: hidden;
+}
+
+.gallery__image:hover>.btn {
+    visibility: visible;
+}
+
+/* headers SVG */
+.header__svg {
+    cursor: pointer;
+    stroke: white;
+    transition: stroke 0.2s;
+}
+
+.header__svg:hover {
+    stroke: yellow;
+}
+
+.burger-button path {
+    color: white;
+    fill: none;
+    stroke-width: 6px;
+    transition: all 0.3s;
+}
+
+.burger-button:hover path {
+    color: yellow;
+}
+
+.burger-button:hover #line1,
+.burger-button:hover #line3 {
+    stroke-dashoffset: -100;
+    stroke-dasharray: 100;
+}
+
+.burger-button:hover #line2 {
+    stroke-width: 0;
+}
+
+#line1 {
+    stroke-dashoffset: 40;
+    stroke-dasharray: 118;
+}
+
+#line2 {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+}
+
+#line3 {
+    stroke-dashoffset: 40;
+    stroke-dasharray: 118;
+}
+
+.footer {
+    background-color: black;
+    height: 50px;
+}
+
+/* SVG city styles */
+.city {
+    max-width: 600px;
+}
+
+/* SVG balovnevo styles */
+.balovnevo {
+    max-width: 900px;
+}
+.balovnevo #markers circle {
+    cursor: pointer;
+}

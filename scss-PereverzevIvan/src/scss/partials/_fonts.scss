@@ -1,0 +1,15 @@
+@mixin font-face($family, $weight, $style, $font-path) {
+    @font-face {
+    font-family: $family;
+    font-display: swap;
+    font-weight: $weight;
+    font-style: $style;
+    src: url($font-path);
+    }
+};
+
+
+@include font-face('Manrope', 400, normal, '../fonts/Manrope/static/Manrope-Regular.ttf');
+@include font-face('Manrope', 500, normal, '../fonts/Manrope/static/Manrope-Medium.ttf');
+@include font-face('Manrope', 700, normal, '../fonts/Manrope/static/Manrope-Bold.ttf');
+@include font-face('Gregor', 400, normal, '../fonts/gregor/gregor.woff');

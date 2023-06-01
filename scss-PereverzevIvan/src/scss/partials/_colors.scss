@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+$colors: (
+    "darkblue": #0A2640,
+    "blue": #1C3D5B,
+    "lightblue": #0DBBFC,
+    "lightgreen": #65E4A3,
+    "green": #00c05d,
+    "lightgray": #95ABBC,
+    "gray-blue": #8FB6D5,
+    "gray": #777777,
+    'red': #FC0000,
+);
+
+@function get-color($color) {
+    @return map.get($colors, $color);
+};
+
+@mixin line-gradient($color1, $color2, $degree) {
+    background: linear-gradient($degree,  get-color($color1) 0%, get-color($color2) 100%);
+};

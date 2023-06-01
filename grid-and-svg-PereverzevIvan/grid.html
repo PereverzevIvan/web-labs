@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid studies</title>
+  <!-- Add fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <!-- Add style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="/#" class="header__link">
+        <img src="images/logo.svg" alt="Polytech Logotype" class="header__logotype">
+      </a>
+      <nav class="header__nav">
+        <a href="/#" class="header__link">index</a>
+        <a href="/#" class="header__link">grid</a>
+        <a href="/#" class="header__link">svg</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="picture-section">
+      <div class="container">
+        <h2>Задание №1. Картина Пита Мондриана</h2>
+        <div class="picture window window--hover">
+          <div style="grid-area: r1;" class="picture__block picture__block--color_red"></div>
+          <div style="grid-area: w1;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w2;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w3;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w4;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w5;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w6;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w7;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: b1;" class="picture__block picture__block--color_blue"></div>
+          <div style="grid-area: s1;" class="picture__block picture__block--color_black"></div>
+          <div style="grid-area: y1;" class="picture__block picture__block--color_yellow"></div>
+          <div style="grid-area: y2;" class="picture__block picture__block--color_yellow"></div>
+          <div style="grid-area: w8;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w9;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: w10;" class="picture__block picture__block--color_white"></div>
+          <div style="grid-area: s2;" class="picture__block picture__block--color_black"></div>
+        </div>
+      </div>
+    </section>
+    <section class="book-section">
+      <div class="container">
+        <h2>Задание №2. Работа Яна Чихольда</h2>
+        <div class="book-cover window window--hover">
+          <div class="book-cover__text1">PHOEBUS PALAST</div>
+          <table class="book-cover__table">
+            <tr>
+              <td colspan="2"><p class="book-cover__table-text">ANFANGSZEITEN:</p></td>
+              <td><p class="book-cover__table-text">4</p></td>
+              <td><p class="book-cover__table-text">8<sup>15</sup></p></td>
+              <td><p class="book-cover__table-text">8<sup>30</sup></p></td>
+            </tr>
+            <tr>
+              <td><p class="book-cover__table-text">SONNTAGS:</p></td>
+              <td><p class="book-cover__table-text">1<sup>45</sup></p></td>
+              <td><p class="book-cover__table-text">4</p></td>
+              <td><p class="book-cover__table-text">8<sup>15</sup></p></td>
+              <td><p class="book-cover__table-text">8<sup>30</sup></p></td>
+            </tr>
+          </table>
+          <div class="book-cover__block"></div>
+          <div class="book-cover__text2">IWAN</div>
+          <div class="book-cover__text3">DER SCHRECKLICHE</div>
+        </div>
+      </div>
+    </section>
+    <section class="board-section">
+      <div class="container">
+        <h2>Задание №3. Информационная панель</h2>
+        <div class="dashboard window">
+          <div class="dashboard__sidebar">
+            <a href="#" class="dashboard__link">Action 1</a>
+            <a href="#" class="dashboard__link">Action 2</a>
+            <a href="#" class="dashboard__link">Action 3</a>
+            <a href="#" class="dashboard__link">Action 4</a>
+            <a href="#" class="dashboard__link">Action 5</a>
+          </div>
+          <img src="images/main-chart.svg" alt="" class="dashboard__card window window--hover" id="main-chart">
+          <img src="images/right-chart-1.svg" alt="" class="dashboard__card window window--hover" id="chart1">
+          <img src="images/right-chart-2.svg" alt="" class="dashboard__card window window--hover" id="chart2">
+          <img src="images/right-chart-3.svg" alt="" class="dashboard__card window window--hover" id="chart3">
+          <img src="images/right-chart-4.svg" alt="" class="dashboard__card window window--hover" id="chart4">
+          <img src="images/right-chart-5.svg" alt="" class="dashboard__card window window--hover" id="chart5">
+        </div>
+      </div>
+    </section>
+    <section class="gallery-section">
+      <div class="container">
+        <h2>Задание №4. Галерея</h2>
+        <div class="gallery window">
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+          <div class="gallery__image window window--hover">
+            <img src="/images/flower.jpg" alt="">
+            <a href="#" class="btn">Понюхать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"></footer>
+</body>
+</html>

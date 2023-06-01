@@ -1,0 +1,207 @@
+@use './variables' as *;
+@use './colors' as c;
+
+/* HTML-ELEMENTS */
+/* General */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding: 5px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    height: 100px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        transform: scale(1.1);
+        color: c.get-color('gray');
+    }
+    &:active, &:focus  {
+        text-decoration: underline;
+        color: red;
+    }
+    // &:visited {
+    //     color: c.get-color('lightblue');
+    // }
+}
+
+p {
+    font-family: 'Gregor';
+    font-size: $fs-common-text;
+}
+
+button {
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    @include c.line-gradient('lightgreen', 'green', 90deg);
+    &:hover {
+        outline: 1px solid black;
+        transform: scale(1.03);
+    }
+    &:focus {
+        outline: 2px solid c.get-color('lightblue'); 
+    }
+    &:active {
+        @include c.line-gradient('green', 'lightgreen', 90deg);
+        transform: scale(1);
+    }
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+form {
+    max-width: 40%;
+    margin:0 auto;
+}
+
+fieldset {
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    button {
+        align-self: center;
+    }
+}
+
+legend {
+    text-align: center;
+}
+
+label {
+    margin-bottom: -10px;
+    margin-left: 10px;
+    font-size: $fs-common-text;
+
+}
+
+input {
+    &[type="text"] {
+        padding: 10px;
+        border-radius: 10px;
+        &:focus {
+            border: none;
+            outline: 2px solid c.get-color('red');
+        }
+    }
+    label:has(&[type="radio"]:checked) {
+        color: c.get-color('red');
+        font-size: $fs-common-text-medium;
+        text-decoration: underline;
+    }
+    label:has(&[type="checkbox"]:checked) {
+        color: c.get-color('green');
+        font-size: $fs-common-text-medium;
+        text-decoration: underline;
+    }
+}
+
+ol {
+    li:hover::marker {
+        color: red;
+    }
+}
+
+ul {
+    list-style: none;
+    li {
+        &::before {
+            content: '';
+            display: inline-block;
+            margin: 0 5px 3px 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 10px;
+            background-color: black;
+        }
+        &:hover::before {
+            background-color: red;
+        }
+    }
+}
+
+
+/* CUSTOM CLASSES */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Headers */
+.title {
+    font-size: $fs-title-medium;
+    line-height: $fs-title-medium;
+    &--big {
+        font-size: $fs-title-big;
+        line-height: $fs-title-big;
+    }
+    &--small {
+        font-size: $fs-title-small;
+        line-height: $fs-title-small;
+    }
+}
+
+.header {
+    &__link {
+        color: white;
+    }
+}
+
+.grid-elem {
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: c.get-color('red');
+    }
+    
+}
